@@ -177,7 +177,7 @@ let language = {
             <h2>Dale un vistazo a mis proyectos <a href="./projects.html">aquí</a> o en <a class="fa fa-github" href="https://github.com/FadedGuy"></a></h2>
             <br>
             <h3>Para contactarme puedes mandarme un <a href="mailto:kevin.aceves@hotmail.com">email</a> o mensajeame en <a class="fa fa-linkedin" href="https://www.linkedin.com/in/kevin-damian-aceves-siordia-679a47156"></a></h3>
-            <h3>Mi CV está disponible <a href="./assets/files/CV_KevinAceves_es.pdf">aquí</a></h3>
+            <h3>Mi CV está disponible <a href="/assets/files/CV_KevinAceves_es.pdf">aquí</a></h3>
             <canvas id="anim"></canvas>
         </div>
     `,
@@ -271,7 +271,7 @@ let language = {
             <h2>Découvrez mes projets <a href="./projects.html">ici</a> ou sur <a class="fa fa-github" href="https://github.com/FadedGuy"></a></h2>
             <br>
             <h3>Vous voulez me contacter ? Envoyez-moi un <a href="mailto:kevin.aceves@hotmail.com">courriel</a> ou un message sur <a class="fa fa-linkedin" href="https://www.linkedin.com/in/kevin-damian-aceves-siordia-679a47156"></a></h3>
-            <h3>Vous voulez voir mon CV ? <a href="./assets/files/CV_KevinAceves_fr.pdf">Cliquez ici</a></h3>
+            <h3>Vous voulez voir mon CV ? <a href="/assets/files/CV_KevinAceves_fr.pdf">Cliquez ici</a></h3>
             <canvas id="anim"></canvas>
         </div>
     `
