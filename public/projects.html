@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/basic.css">
-    <link rel="stylesheet" href="assets/css/menu.css">
+    <link href="https://fonts.googleapis.com/css?family=Source%20Code%20Pro" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/projects.css">
-    <link rel="stylesheet" href="assets/css/langColors.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script type="text/javascript" src="assets/scripts/menu.js"></script>   
+    <script type="text/javascript" src="assets/scripts/htmlConvert.js"></script>
+    <script type="text/javascript" src="assets/scripts/colors.js"></script>
+    <script type="text/javascript" src="assets/scripts/lang/lang_projects.js"></script>
+    <script type="text/javascript" src="assets/scripts/determineLanguage.js"></script>
     <script type="text/javascript" src="assets/scripts/projects.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-BRK7C3Q4QG"></script>
@@ -24,18 +25,13 @@
 </head>
 <body>
     <div class="project-wrap">
-        <div class="project-app">
-            <div class="project-head">
-                A total of <a id="nb-projects" style="font-weight:bold">0</a> projects using <a id="nb-langs" style="font-weight:bold">0</a> different languages, with 
-                <a id="nb-lines" style="font-weight:bold">0</a> lines of code
-            </div>
+        <div class="project-app" id="head">
         </div>
         <div class="project-app" id="app">
-            <!-- <div class="project-app" id="app"></div> -->
+            <div class="project-card">
+                <b>Loading projects... Please wait</b>
+            </div>
         </div>
     </div>    
-
-    <div class="menu-wrap" id="menu-div"></div>
-
 </body>
 </html>

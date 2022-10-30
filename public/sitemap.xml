@@ -18,16 +18,4 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://fadedguy.dev/projects.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://fadedguy.dev/projects.html"/>
   </url>
-  <url>
-    <loc>https://fadedguy.dev/contact.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fadedguy.dev/contact.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://fadedguy.dev/contact.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://fadedguy.dev/contact.html"/>
-  </url>
-  <url>
-    <loc>https://fadedguy.dev/404.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fadedguy.dev/404.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://fadedguy.dev/404.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://fadedguy.dev/404.html"/>
-  </url>
 </urlset>

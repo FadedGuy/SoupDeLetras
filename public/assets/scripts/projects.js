@@ -2,25 +2,9 @@
 
 window.addEventListener('load', main);
 
-const dict_langs ={
-    "BibTeX" : "bibtex",
-    "C++" : "cpp",
-    "C#" : "csharp",
-    "C" : "c",
-    "CSS" : "css",
-    "HTML" : "html",
-    "JavaScript" : "js",
-    "Other" : "other",
-    "Processing" : "processing",
-    "Procfile" : "procfile",
-    "Python" : "py",
-    "SCSS" : "scss",
-    "TeX" : "tex",
-    "TypeScript" : "ts",
-};
-
 let sum_lines = 0;
 let list_langs = [];
+let langs_hashcolor = {};
 let nb_projects = 0;
 
 async function https_get_github(user){
@@ -46,9 +30,11 @@ async function lang_array(repo, card){
             sum_lines += lang[1];
             if(list_langs.find(element => element == lang[0]) == undefined){
                 list_langs.push(lang[0]);
+                let hashed = intToRGB(hashCode(lang[0]));
+                langs_hashcolor[lang[0]] = `background:#${hashed};` +  `color:${calculateLuminance(hashed) ? "white" : "black"}`;
             }
            card_tags += `
-                <span class="card-tag lang-${dict_langs[lang[0]]}">${lang[0]}</span>
+                <span class="card-tag" style=${langs_hashcolor[lang[0]]}>${lang[0]}</span>
            `;
         });      
 
@@ -59,7 +45,7 @@ async function lang_array(repo, card){
                     <a class="card-link" href="${repo.html_url}" target="blank">${repo.html_url}</a>
                 </div>
                 <div class="card-body">
-                    <p class"="card-description">${repo.description !== null ? repo.description : "No description available"}</p>
+                    <p class="card-description">${repo.description !== null ? repo.description : "No description available"}</p>
                     <br>
                     <div class="card-tags">
                         ${card_tags}
@@ -76,6 +62,18 @@ async function lang_array(repo, card){
 }
 
 function main(){
+    let body = document.getElementById('head');
+
+    if(body === null){
+        return;
+    }
+
+    let languagePref = prefLanguage();
+
+    body.innerHTML = html`
+        ${language[languagePref]}
+    `;
+    
     https_get_github("fadedguy").then(json => {
         let div_cards = document.getElementById('app');
         nb_projects = Object.entries(json).length;
@@ -84,6 +82,8 @@ function main(){
             return null;
         }
         
+        div_cards.innerHTML = "";
+
         json.forEach((repo) => {
             lang_array(repo, div_cards);
         });
